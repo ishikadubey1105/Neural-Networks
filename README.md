@@ -31,38 +31,38 @@ This repository contains 20 hands-on exercises that teach the fundamentals of ne
 ### **Core Concepts** (1-5)
 | Exercise | Description | File |
 |----------|-------------|------|
-| 1 | Simple neural network with step activation | `exercise_01.c` |
-| 2 | Single artificial neuron (two inputs, one output) | `exercise_02.c` |
-| 3 | Weighted sum calculator | `exercise_03.c` |
-| 4 | Threshold activation function | `exercise_04.c` |
-| 5 | Basic perceptron model | `exercise_05.c` |
+| 1 | Simple neural network with step activation | `simple_neural_network.c` |
+| 2 | Single artificial neuron (two inputs, one output) | `single_artificial_neuron.c` |
+| 3 | Weighted sum calculator | `weighted_sum_calculator.c` |
+| 4 | Threshold activation function | `threshold_activation.c` |
+| 5 | Basic perceptron model | `basic_perceptron.c` |
 
 ### **Logic Gates** (6-8)
 | Exercise | Description | File |
 |----------|-------------|------|
-| 6 | AND gate using neural network | `exercise_06.c` |
-| 7 | OR gate using neural network | `exercise_07.c` |
-| 8 | NOT gate using neural network | `exercise_08.c` |
+| 6 | AND gate using neural network | `and_gate.c` |
+| 7 | OR gate using neural network | `or_gate.c` |
+| 8 | NOT gate using neural network | `not_gate.c` |
 
 ### **Neuron Operations** (9-13)
 | Exercise | Description | File |
 |----------|-------------|------|
-| 9 | Compute neuron output from inputs, weights, and bias | `exercise_09.c` |
-| 10 | Binary output based on threshold value | `exercise_10.c` |
-| 11 | Demonstrate bias effect on neuron output | `exercise_11.c` |
-| 12 | Neural network with fixed weights (no training) | `exercise_12.c` |
-| 13 | Display intermediate net input of a neuron | `exercise_13.c` |
+| 9 | Compute neuron output from inputs, weights, and bias | `neuron_output_computation.c` |
+| 10 | Binary output based on threshold value | `binary_threshold_output.c` |
+| 11 | Demonstrate bias effect on neuron output | `bias_effect_demo.c` |
+| 12 | Neural network with fixed weights (no training) | `fixed_weights_network.c` |
+| 13 | Display intermediate net input of a neuron | `intermediate_net_input.c` |
 
 ### **Classification & Advanced** (14-20)
 | Exercise | Description | File |
 |----------|-------------|------|
-| 14 | Binary classification using perceptron | `exercise_14.c` |
-| 15 | Hard-limit activation function | `exercise_15.c` |
-| 16 | Boolean classifier (true/false) | `exercise_16.c` |
-| 17 | Two-input, one-output neural unit | `exercise_17.c` |
-| 18 | Forward propagation demonstration | `exercise_18.c` |
-| 19 | Neural network with user-defined inputs (flexible) | `exercise_19.c` |
-| 20 | Display final neuron output after activation | `exercise_20.c` |
+| 14 | Binary classification using perceptron | `binary_classification.c` |
+| 15 | Hard-limit activation function | `hard_limit_activation.c` |
+| 16 | Boolean classifier (true/false) | `boolean_classifier.c` |
+| 17 | Two-input, one-output neural unit | `two_input_neural_unit.c` |
+| 18 | Forward propagation demonstration | `forward_propagation.c` |
+| 19 | Neural network with user-defined inputs (flexible) | `user_defined_network.c` |
+| 20 | Display final neuron output after activation | `final_output_display.c` |
 
 ---
 
@@ -87,29 +87,29 @@ cd Neural-Networks
 ### **Method 1: Individual Compilation**
 Compile a specific exercise:
 ```bash
-gcc exercise_01.c -o exercise_01
+gcc simple_neural_network.c -o simple_neural_network
 ```
 
 Run the compiled program:
 ```bash
 # On Windows
-exercise_01.exe
+simple_neural_network.exe
 
 # On Linux/Mac
-./exercise_01
+./simple_neural_network
 ```
 
 ### **Method 2: Compile All at Once**
 On **Windows** (PowerShell):
 ```powershell
-foreach ($file in Get-ChildItem -Filter "exercise_*.c") { 
+foreach ($file in Get-ChildItem -Filter "*.c") { 
     gcc $file.Name -o $file.BaseName.exe 
 }
 ```
 
 On **Linux/Mac** (Bash):
 ```bash
-for file in exercise_*.c; do 
+for file in *.c; do 
     gcc "$file" -o "${file%.c}"
 done
 ```
@@ -117,7 +117,7 @@ done
 ### **Running an Exercise**
 Each program is interactive and will prompt you for inputs:
 ```bash
-./exercise_01
+./simple_neural_network
 
 # Example interaction:
 # Enter input x1: 1.5
@@ -169,27 +169,27 @@ Input → Weighted Sum → Activation → Output
 
 ```
 Neural-Networks/
-├── README.md           # This file
-├── exercise_01.c       # Exercise 1: Simple neural network
-├── exercise_02.c       # Exercise 2: Single artificial neuron
-├── exercise_03.c       # Exercise 3: Weighted sum
-├── exercise_04.c       # Exercise 4: Threshold activation
-├── exercise_05.c       # Exercise 5: Basic perceptron
-├── exercise_06.c       # Exercise 6: AND gate
-├── exercise_07.c       # Exercise 7: OR gate
-├── exercise_08.c       # Exercise 8: NOT gate
-├── exercise_09.c       # Exercise 9: Neuron output computation
-├── exercise_10.c       # Exercise 10: Binary output
-├── exercise_11.c       # Exercise 11: Bias effect demonstration
-├── exercise_12.c       # Exercise 12: Fixed weights network
-├── exercise_13.c       # Exercise 13: Intermediate net input
-├── exercise_14.c       # Exercise 14: Binary classification
-├── exercise_15.c       # Exercise 15: Hard-limit activation
-├── exercise_16.c       # Exercise 16: Boolean classifier
-├── exercise_17.c       # Exercise 17: Two-input neural unit
-├── exercise_18.c       # Exercise 18: Forward propagation
-├── exercise_19.c       # Exercise 19: User-defined inputs
-└── exercise_20.c       # Exercise 20: Final output display
+├── README.md                        # This file
+├── simple_neural_network.c          # Exercise 1: Simple neural network
+├── single_artificial_neuron.c       # Exercise 2: Single artificial neuron
+├── weighted_sum_calculator.c        # Exercise 3: Weighted sum
+├── threshold_activation.c           # Exercise 4: Threshold activation
+├── basic_perceptron.c               # Exercise 5: Basic perceptron
+├── and_gate.c                       # Exercise 6: AND gate
+├── or_gate.c                        # Exercise 7: OR gate
+├── not_gate.c                       # Exercise 8: NOT gate
+├── neuron_output_computation.c      # Exercise 9: Neuron output computation
+├── binary_threshold_output.c        # Exercise 10: Binary output
+├── bias_effect_demo.c               # Exercise 11: Bias effect demonstration
+├── fixed_weights_network.c          # Exercise 12: Fixed weights network
+├── intermediate_net_input.c         # Exercise 13: Intermediate net input
+├── binary_classification.c          # Exercise 14: Binary classification
+├── hard_limit_activation.c          # Exercise 15: Hard-limit activation
+├── boolean_classifier.c             # Exercise 16: Boolean classifier
+├── two_input_neural_unit.c          # Exercise 17: Two-input neural unit
+├── forward_propagation.c            # Exercise 18: Forward propagation
+├── user_defined_network.c           # Exercise 19: User-defined inputs
+└── final_output_display.c           # Exercise 20: Final output display
 ```
 
 ---
