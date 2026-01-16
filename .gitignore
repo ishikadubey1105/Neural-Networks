@@ -1,0 +1,29 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+
+# MinGW setup script (optional)
+setup_mingw.ps1
+
+# IDE and editor files
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build directories
+build/
+bin/
+obj/
+
+# Backup files
+*.bak
+*.tmp
